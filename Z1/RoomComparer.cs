@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Z1
 {
-    class RoomComparer : IComparer<Room>
+    class RoomComparer : IComparer<IRoom>
     {
-        public int Compare(Room x, Room y)
+        public int Compare(IRoom x, IRoom y)
         {
             if (x.Windows == y.Windows) return 0;
             else if (x.Windows > y.Windows) return 1;

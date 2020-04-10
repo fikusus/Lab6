@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Z1
 {
-    interface Room:IComparable<Room>
+    interface IRoom:IComparable<IRoom>
     {
         uint Windows { get; set; }
         double A_side { get; }

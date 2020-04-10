@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Z1
 {
-    class MyRoom:Room
+    class MyRoom:IRoom
     {
         public MyRoom(uint windows, double a_side, double b_side, uint beds)
         {
@@ -29,7 +29,7 @@ namespace Z1
             return A_side * B_side;
         }
 
-        public int CompareTo(Room obj)
+        public int CompareTo(IRoom obj)
         {
             if (this.Area() == obj.Area()) return 0;
             else if (this.Area() > obj.Area()) return 1;

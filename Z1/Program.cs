@@ -17,7 +17,7 @@ namespace Z1
         {
             Random rnd = new Random();
             int n = rnd.Next(4, 10);
-            Room[] rooms = new Room[n];
+            IRoom[] rooms = new IRoom[n];
             for (int i = 0; i < n; i++)
             {
                 if (rnd.Next(0, 2) == 0)
@@ -30,19 +30,19 @@ namespace Z1
                 }
             }
             Console.WriteLine("До сортировки:");
-            foreach (Room item in rooms)
+            foreach (IRoom item in rooms)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine("Сортировка по площади(IComparable):");
             Array.Sort(rooms);
-            foreach (Room item in rooms)
+            foreach (IRoom item in rooms)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine("Сортировка по количеству окон(IComparer):");
             Array.Sort(rooms, new RoomComparer());
-            foreach (Room item in rooms)
+            foreach (IRoom item in rooms)
             {
                 Console.WriteLine(item);
             }
